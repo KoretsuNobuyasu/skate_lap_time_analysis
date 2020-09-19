@@ -1,0 +1,13 @@
+version: "2"
+services:
+  laptime:
+    container_name: laptime
+    image: nobudev/laptime:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8005:8888"
+      - "10005:22"
+    volumes:
+      - "~/Skate_Heart_Rate/skate_lap_time_analysis:/home/dev/projects/laptime"
